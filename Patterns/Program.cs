@@ -5,6 +5,10 @@ using Patterns.Builder.ConcreteBuilder;
 using Patterns.TemplateMethod;
 using System;
 using System.Collections.Generic;
+using Patterns.Abstract_Factory.Factories.Abstract;
+using Patterns.Abstract_Factory.Factories.Concrete;
+using Patterns.Abstract_Factory.Products.Abstract;
+using Patterns.Singleton;
 
 namespace Patterns
 {
@@ -52,6 +56,21 @@ namespace Patterns
             //lol.BuildSpell();
             //builder.GetSpell();
 
+            #endregion
+
+            #region Abstract Factory
+
+            AbstractFactory statsFactory = new StatsFactory();
+            IncreasePotions potion = statsFactory.GetIncreasePotion();
+            Console.WriteLine(potion.Effect);
+
+            #endregion
+
+            #region
+
+            Team team = Team.GetTeam();
+            team.AddMember(new TeamMember());
+            
             #endregion
 
             Console.ReadLine();
