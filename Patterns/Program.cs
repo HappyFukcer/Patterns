@@ -66,7 +66,7 @@ namespace Patterns
 
             #endregion
 
-            #region
+            #region Singleton
 
             Team team = Team.GetTeam();
             team.AddMember(new TeamMember());
