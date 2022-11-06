@@ -1,4 +1,5 @@
-﻿using Patterns.Strategy;
+﻿using System.IO;
+using Patterns.Strategy;
 using Patterns.FactoryMethod;
 using Patterns.Builder;
 using Patterns.Builder.ConcreteBuilder;
@@ -9,6 +10,7 @@ using Patterns.Abstract_Factory.Factories.Abstract;
 using Patterns.Abstract_Factory.Factories.Concrete;
 using Patterns.Abstract_Factory.Products.Abstract;
 using Patterns.Singleton;
+using System.Linq;
 
 namespace Patterns
 {
@@ -20,7 +22,7 @@ namespace Patterns
             //Hero heroAxe = new Hero(new Axe(damage: 90));
             //Hero heroBlade = new Hero(new Blade(damage: 95));
 
-            //int monsterDef = 75;
+            int monsterDef = 75;
 
             //Console.WriteLine($"Axe: {heroAxe.Attack(monsterDef)}");
             //Console.WriteLine($"Axe: {heroBlade.Attack(monsterDef)}");
@@ -60,17 +62,17 @@ namespace Patterns
 
             #region Abstract Factory
 
-            AbstractFactory statsFactory = new StatsFactory();
-            IncreasePotions potion = statsFactory.GetIncreasePotion();
-            Console.WriteLine(potion.Effect);
+            //AbstractFactory statsFactory = new StatsFactory();
+            //IncreasePotions potion = statsFactory.GetIncreasePotion();
+            //Console.WriteLine(potion.Effect);
 
             #endregion
 
             #region Singleton
 
-            Team team = Team.GetTeam();
-            team.AddMember(new TeamMember());
-            
+            //Team team = Team.GetTeam();
+            //team.AddMember(new TeamMember());
+
             #endregion
 
             Console.ReadLine();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Patterns.Strategy
@@ -9,7 +10,6 @@ namespace Patterns.Strategy
         public int Health { get; set; }
         private IWeapon Weapon;
         private float WeaponSkill = 1.1f;
-
 
         public Hero(IWeapon weapon)
         {

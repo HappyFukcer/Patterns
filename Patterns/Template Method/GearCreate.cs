@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Patterns.TemplateMethod;
 
-namespace Patterns.TemplateMethod
+public abstract class GearCreate
 {
-    abstract class GearCreate
+    public virtual void ForgeGear()
     {
-        public virtual void ForgeGear()
-        {
-            PrepereMaterials();
-            ForgingMaterials();
-            CombineMaterials();
-        }
-
-        public abstract void PrepereMaterials();
-        public abstract void ForgingMaterials();
-        public abstract void CombineMaterials();
+        PrepereMaterials();
+        ForgingMaterials();
+        CombineMaterials();
     }
+
+    public void PrepereMaterials() { }
+    public abstract void ForgingMaterials();
+    public void CombineMaterials() { }
 }
